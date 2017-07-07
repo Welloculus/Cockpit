@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.flashmsg{
+     background-color:#ecf0f5;
+     padding:2% 5% 0% 2%;
+}
+.aftrlgn{
+     margin-left: 230px;
+}
+.content-wrapper{
+     min-height: 820px;
+}

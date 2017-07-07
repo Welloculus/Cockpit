@@ -1,0 +1,160 @@
+<div class="content-wrapper" style="min-height: 595px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+                <span id="spa-title">Profile</span>
+                <small>Control panel</small>
+        </h1>
+
+
+                <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active" id="spa-title">Profile</li>
+                </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+            <div id="system-message-container">
+	</div>
+<!-- Small boxes (Stat box) -->
+<div ng-app="providerApp" class="ng-scope">
+<!-- ngView: undefined --><div class="container bootstrap snippets">
+      <!-- ngIf: loading==true -->
+
+
+<div class="row">
+     <div class="col-xs-12 col-sm-9">
+          <form class="form-horizontal ng-pristine ng-valid">
+               <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <h4 class="panel-title">User info</h4>
+                    </div>
+                    <div class="panel-body">
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Location</label>
+                              <div class="col-sm-10">
+                                   <select class="form-control">
+                                        <option value="Select country">Select country</option>
+                                        <option selected="" value="India">India</option>
+                                        <option value="US">US</option>
+                                        <option value="Canda">Canda</option>
+                                        <option value="Australia">Australia</option>
+                                   </select>
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Name</label>
+                              <div class="col-sm-10"> <input type="text" class="form-control" name="name" value="{{user.name}}"></div>
+                         </div>
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Username</label>
+                              <div class="col-sm-10">
+                                   <input type="text" class="form-control" name="username" disabled="" value="{{user.user_type}}">
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="panel panel-default">
+                    <div class="panel-heading">
+                         <h4 class="panel-title">Contact info</h4>
+                    </div>
+                    <div class="panel-body">
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Work number</label>
+                              <div class="col-sm-10">
+                                   <input type="tel" class="form-control">
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Mobile number</label>
+                              <div class="col-sm-10">
+                                   <input type="tel" class="form-control">
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">E-mail address</label>
+                              <div class="col-sm-10">
+                                   <input type="email" class="form-control" value="provider@abc.com">
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Work address</label>
+                              <div class="col-sm-10">
+                                   <textarea rows="3" class="form-control"></textarea>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="panel panel-default">
+                    <div class="panel-heading"><h4 class="panel-title">Security</h4></div>
+                    <div class="panel-body">
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">Current password</label>
+                              <div class="col-sm-10">
+                                   <input type="password" class="form-control">
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <label class="col-sm-2 control-label">New password</label>
+                              <div class="col-sm-10">
+                                   <input type="password" class="form-control">
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <div class="col-sm-10 col-sm-offset-2">
+                                   <div class="checkbox">
+                                        <input type="checkbox" id="checkbox_1">
+                                        <label for="checkbox_1">Make this account public</label>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <div class="col-sm-10 col-sm-offset-2">
+                                   <button type="submit" class="btn btn-primary">Submit</button>
+                                   <button type="reset" class="btn btn-default">Cancel</button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </form>
+     </div>
+     <div class="col-xs-12 col-sm-3">
+          <div class="profile__contact-info">
+               <div class="profile__contact-info-item">
+                    <div class="profile__contact-info-icon"> <i class="fa fa-comment"></i></div>
+                    <div class="profile__contact-info-body"><h5 class="profile__contact-info-heading"> Quick tip</h5> You can change your password and update your profile directly here.</div>
+               </div>
+          </div>
+     </div>
+</div>
+
+
+</div>
+
+    <div class="container ng-scope">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title" id="pop-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p id="pop-body">This is a small modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="pop-proceed" value="yes">PROCEED</button>
+              <button type="button" class="btn btn-default" id="pop-cancel" value="no">CANCEL</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+    </section>
+    <!-- /.content -->
+  </div>
