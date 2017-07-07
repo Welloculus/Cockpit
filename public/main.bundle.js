@@ -31,19 +31,19 @@ var AuthService = (function () {
     AuthService.prototype.authenticateUser = function (user) {
         console.log(user);
         if (user.username == 'provider' && user.password == 'pass@123') {
-            return this.http.get('assets/data/provider.json')
+            return this.http.get('./assets/data/provider.json')
                 .map(function (res) { return res.json(); });
         }
         else if (user.username == 'facilitator' && user.password == 'pass@123') {
-            return this.http.get('assets/data/faciliator.json')
+            return this.http.get('./assets/data/faciliator.json')
                 .map(function (res) { return res.json(); });
         }
         else if (user.username == 'supplier' && user.password == 'pass@123') {
-            return this.http.get('assets/data/supplier.json')
+            return this.http.get('./assets/data/supplier.json')
                 .map(function (res) { return res.json(); });
         }
         else {
-            return this.http.get('assets/data/error.json')
+            return this.http.get('./assets/data/error.json')
                 .map(function (res) { return res.json(); });
         }
     };
