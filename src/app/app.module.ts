@@ -22,6 +22,7 @@ import { DevicesComponent } from './components/devices/devices.component';
 import { UsersComponent } from './components/users/users.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { FacilitiesComponent } from './components/facilities/facilities.component';
+import { ManageAlertsComponent } from './components/manage-alerts/manage-alerts.component';
 
 
 const appRoutes: Routes = [
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
 { path:'users', component: UsersComponent, canActivate:[AuthGuard] },
 { path:'reports', component: ReportsComponent, canActivate:[AuthGuard] },
 { path:'facilities', component: FacilitiesComponent, canActivate:[AuthGuard] },
+{ path:'manage-alerts', component: ManageAlertsComponent, canActivate:[AuthGuard] },
 { path:'login', component: LoginComponent },
 { path:'', redirectTo: '/dashboard', pathMatch: 'full' },
 { path:'', component: FooterComponent  },
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
     DevicesComponent,
     UsersComponent,
     ReportsComponent,
-    FacilitiesComponent
+    FacilitiesComponent,
+    ManageAlertsComponent
   ],
   imports: [
     BrowserModule,

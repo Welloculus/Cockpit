@@ -12,17 +12,17 @@ export class ReportsComponent implements OnInit {
   ngOnInit() {
   }
   // Pie
-  public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-  public pieChartData:number[] = [300, 500, 100];
+  public pieChartLabels:string[] = ['Critical Low', 'Slightly Low', 'Normal', 'Slightly High', 'Critical High'];
+  public pieChartData:number[] = [10, 45, 50, 20, 17];
   public pieChartType:string = 'pie';
+  public pieChartColors:  {}[]          = [ { backgroundColor: ['#b9cff0', '#dfb9f1', '#e0e0e0','#f7b391','#ff6060'] } ];
 
   // lineChart
   public lineChartData:Array<any> = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-    {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
+       {data: [100, 160, 120, 170, 180], label: 'Max Pulse Rate'},
+       {data: [40, 70, 60, 90, 120], label: 'Min Pulse Rate'}
   ];
-  public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartLabels:Array<any> = ['Critically low', 'Slightly low', 'Normal', 'Slightly High', 'Critically High'];
   public lineChartOptions:any = {
     responsive: true
   };
@@ -71,13 +71,13 @@ export class ReportsComponent implements OnInit {
       scaleShowVerticalLines: false,
       responsive: true
     };
-    public barChartLabels:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+    public barChartLabels:string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     public barChartType:string = 'bar';
     public barChartLegend:boolean = true;
 
     public barChartData:any[] = [
-      {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-      {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+      {data: [30, 33, 40, 45, 49, 32, 35], label: 'Max Temperature'},
+      {data: [25, 28, 35, 35, 45, 29, 26], label: 'Min Temperature'}
     ];
 
     // events

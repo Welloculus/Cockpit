@@ -27,9 +27,11 @@
 <div>
      <div class="col-md-5 panel panel-default">
           <div style="display: block">
+          <h3 class="tac">Heart Chart</h3>
             <canvas baseChart
                     [data]="pieChartData"
                     [labels]="pieChartLabels"
+                    [colors]="pieChartColors"
                     [chartType]="pieChartType"
                     (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)"></canvas>
@@ -38,6 +40,7 @@
 <div>
      <div class="col-sm-offset-1 col-md-5 panel panel-default">
     <div style="display: block;">
+    <h3 class="tac">Blood Pressure Chart</h3>
     <canvas baseChart width="400" height="400"
                 [datasets]="lineChartData"
                 [labels]="lineChartLabels"
@@ -54,6 +57,7 @@
 <div>
      <div class="col-md-6 panel panel-default">
      <div style="display: block">
+          <h3 class="tac">Temperature Chart</h3>
          <canvas baseChart
                  [datasets]="barChartData"
                  [labels]="barChartLabels"

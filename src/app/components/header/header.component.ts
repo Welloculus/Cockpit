@@ -21,5 +21,13 @@ ngOnInit() {
      this.user = JSON.parse(localStorage.getItem('user'));
      console.log(this.user);
 }
-
+     onLogoutClick(){
+         this.authService.logout();
+         this.flashMessage.show("You are logged out",{
+             cssClass: "alert alert-success",
+             timeout:3000
+         });
+         this.router.navigate(['/login']);
+         return false;
+     }
 }
