@@ -749,7 +749,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.flashmsg{\n     background-color:#ecf0f5;\n     padding:2% 5% 0% 2%;\n}\n.aftrlgn{\n     margin-left: 230px;\n}\n.content-wrapper{\n     min-height: 820px;\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.flashmsg{\n     background-color:#ecf0f5;\n     padding:2% 2% 0% 2%;\n}\n.aftrlgn{\n     padding-left: 260px;\n}\n.content-wrapper{\n     min-height: 820px;\n}\n", ""]);
 
 // exports
 

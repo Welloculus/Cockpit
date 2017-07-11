@@ -35,24 +35,31 @@
                                      <tr>
                                           <th>#</th>
                                           <th>First Name</th>
+                                          <th>Middle Name</th>
                                           <th>Last Name</th>
-                                          <th>Username</th>
-                                          <th>Gender</th>
                                           <th>Contact</th>
+                                          <th>Address</th>
                                           <th>Email</th>
-                                          <th>City</th>
+                                          <th>Gender</th>
                                      </tr>
                                   </thead>
                                   <tbody>
                                      <tr *ngFor="let user of users; let i = index" [attr.data-index]="i">
                                           <td>{{(i+1)}}</td>
-                                          <td>{{user.patient_firstname}}</td>
-                                          <td>{{user.patient_lastname}}</td>
-                                          <td>{{user.patient_username}}</td>
-                                          <td>{{(user.patient_gender=='M'?'Male':'Female')}}</td>
-                                          <td>{{user.contact}}</td>
+                                          <td>{{user.first_name}}</td>
+                                          <td>{{user.middle_name}}</td>
+                                          <td>{{user.last_name}}</td>
+                                          <td>{{
+                                               user.contact_numbers[0].primary.concat(((user.contact_numbers[0].secondary!="")?(", "+user.contact_numbers[0].secondary):""))
+                                          }}</td>
+                                          <td>{{
+                                               user.address[0].line1.concat(((user.address[0].line2!="")?(", "+user.address[0].line2):""))
+                                               .concat((user.address[0].city!=""?(", "+user.address[0].city):""))
+                                               .concat((user.address[0].state!=""?(", "+user.address[0].state):""))
+                                               .concat((user.address[0].zip!=""?(", "+user.address[0].zip):""))
+                                          }}</td>
                                           <td>{{user.email}}</td>
-                                          <td>{{user.city}}</td>
+                                          <td>{{(user.gender=='M'?'Male':'Female')}}</td>
                                      </tr>
                                   </tbody>
                               </table>

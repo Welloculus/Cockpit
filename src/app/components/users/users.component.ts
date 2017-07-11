@@ -12,47 +12,98 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
      this.users = [
-          {
-            "patient_dob": "603719087",
-            "patient_gender": "M",
-            "city": "Delhi",
-            "email": "saurav.kumar@impetus.co.in",
-            "patient_username": "saurav",
-            "patient_lastname": "kumar",
-            "patient_firstname": "sauravsingh",
-            "contact": "9981925954"
-          },
-          {
-           "city": "Noida",
-           "contact": "9785412648",
-           "patient_dob": "319635261",
-           "patient_gender": "M",
-           "email": "raghvendra@impetus.co.in",
-           "patient_username": "testuser",
-           "patient_lastname": "LName",
-           "patient_firstname": "Fname"
-         },
-         {
-          "patient_dob": "414329661",
-          "patient_gender": "F",
-           "city": "Indore",
-           "email": "taruna@impetus.co.in",
-           "patient_firstname": "taruna",
-           "patient_lastname": "kshirsagar",
-           "patient_username": "tarunakshirsagar",
-           "contact": "9981947115"
-         },
-         {
-          "patient_dob": "603718461",
-          "patient_gender": "M",
-           "city": "Indore",
-           "email": "anuj@impetus.co.in",
-           "patient_firstname": "Prachi",
-           "patient_lastname": "Jain",
-           "patient_username": "prachi",
-           "contact": "9981947722"
-         }
-     ];
+    {
+      "_id": "595b472a5ed862817f454001",
+      "first_name": "Anees",
+      "middle_name": "Lal",
+      "last_name": "Deol",
+      "email": "padama.radhakrishnan@pal.in",
+      "primary_facility_id": "343",
+      "dob": "1984-06-09",
+      "gender": "M",
+      "address": [
+        {
+          "line1": "16, Brock Villas",
+          "line2": "Model Town",
+          "city": "Ajmer",
+          "state": "Rajasthan",
+          "zip": "380332"
+        }
+      ],
+      "contact_numbers": [
+        {
+          "primary": "06993579876",
+          "secondary": "5396107605"
+        }
+      ],
+      "emergency_contacts": [
+        {
+          "name": "",
+          "address": "",
+          "email": "",
+          "primary_phone": "",
+          "secondary_phone": ""
+        }
+      ],
+      "devices": [
+        {
+          "id": "",
+          "user_device_id": "",
+          "device_name": "",
+          "data_type": "",
+          "communication_mode": "",
+          "last_conected": "",
+          "last_status": ""
+        }
+      ]
+    },
+    {
+      "_id": "595b472a5ed862817f454002",
+      "first_name": "Yogesh",
+      "middle_name": "Venkat",
+      "last_name": "Sidhu",
+      "email": "harbhajan36@mangal.in",
+      "primary_facility_id": "487",
+      "dob": "1971-02-26",
+      "gender": "M",
+      "address": [
+        {
+          "line1": "49, Mansarovar",
+          "line2": "",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "zip": "389346"
+        }
+      ],
+      "contact_numbers": [
+        {
+          "primary": "05649952128",
+          "secondary": "3764740879"
+        }
+      ],
+      "emergency_contacts": [
+        {
+          "name": "",
+          "address": "",
+          "email": "",
+          "primary_phone": "",
+          "secondary_phone": ""
+        }
+      ],
+      "devices": [
+        {
+          "id": "",
+          "user_device_id": "",
+          "device_name": "",
+          "data_type": "",
+          "communication_mode": "",
+          "last_conected": "",
+          "last_status": ""
+        }
+      ]
+    }
+  ];
+
   }
 
 }

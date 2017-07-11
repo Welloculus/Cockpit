@@ -1,3 +1,6 @@
+.dtxt{
+     line-height: 2.5;
+}
 tbody > tr {
     cursor: pointer;
 }
