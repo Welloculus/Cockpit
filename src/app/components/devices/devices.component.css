@@ -7,7 +7,9 @@ tbody > tr {
 div#myModal {
     padding-top: 5%;
 }
-
+tbody>tr td:nth-of-type(even) {
+    float: none;
+}
 @media (min-width: 768px){
      .modal-content {
          -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
@@ -41,4 +43,85 @@ div#myModal {
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
     -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+
+
+tbody>tr td:nth-of-type(even) {
+    float: none;
+}
+
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 1075px),
+(min-device-width: 768px) and (max-device-width: 1075px)  {
+
+
+     .table-striped>tbody>tr:nth-child(odd)>td, .table>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th, .table>tbody>tr:nth-child(odd)>th {
+          background-color: #fff;
+     }
+     .table-striped>tbody>tr:nth-child(even)>td, .table>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th, .table>tbody>tr:nth-child(even)>th {
+          background-color: #eee;
+     }
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+     tbody tr:nth-of-type(odd) {
+         background: #eee;
+     }
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { /* border: 1px solid #ccc; */ margin-bottom: 20px; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+          min-height: 38px;
+	}
+
+     .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
+         padding-left: 180px;
+     }
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+          font-weight: bold;
+	}
+
+.table-bordered{
+     border: none;
+}
+     /*
+	Label the data
+	*/
+     td:nth-of-type(1):before { content: "#"; }
+	td:nth-of-type(2):before { content: "Name"; }
+	td:nth-of-type(3):before { content: "Type"; }
+	td:nth-of-type(4):before { content: "In Stock"; }
+	td:nth-of-type(5):before { content: "Supplier Name"; }
+	td:nth-of-type(6):before { content: "Supplier City"; }
+	td:nth-of-type(7):before { content: "Status"; }
 }

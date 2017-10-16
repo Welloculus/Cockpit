@@ -7,5 +7,127 @@
      padding-left: 260px;
 }
 .content-wrapper{
-     min-height: 820px;
+     background: #c2dad0;
 }
+
+app-login div#flashMessages {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.main-footer {
+     /* margin-left: 0px!important; */
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    /* position: absolute; */
+    /* left: 50px; */
+    /* right: 50px; */
+    padding-bottom: 15px;
+    padding-top: 20px;
+    /* margin-left: 101px; */
+    text-align: right;
+    font-size: 12px;
+    /* margin-right: 40px; */
+    /* background: #2c3e50; */
+    /* margin-right: 38px; */
+    /* margin-left: -20px; */
+    /* margin-right: -20px; */
+    /* margin-bottom: -20px; */
+    /* bottom: 0px; */
+    /* margin-bottom: 0px; */
+    /* position: absolute; */
+    right: 20PX;
+    left: 100PX;
+    padding: 20px;
+}
+.main-footer a {
+    color: #000000;
+    text-decoration: none;
+}
+.main-footer hr {
+    border-top: 2px solid #949494;
+}
+
+/**************************************  new css style *******************************/
+.table-simple>tbody>tr>td, .table-simple>tbody>tr>th, .table-simple>tfoot>tr>td, .table-simple>tfoot>tr>th, .table-simple>thead>tr>td, .table-simple>thead>tr>th {
+        border: none;
+    }
+    .table-striped>tbody>tr:nth-child(odd)>td, .table>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th, .table>tbody>tr:nth-child(odd)>th {
+        background-color: white;
+    }
+    tbody>tr td:nth-of-type(even) {
+    float: right;
+    }
+    thead>tr th:nth-of-type(even) {
+    text-align: right;
+    padding-right: 105px;
+    }
+    .module-projects-list .progress-container .progress-pc{
+    width: 40px;
+    }
+    .navbar-brand{
+    padding: 0px 0px;
+    }
+    img.image-logo {
+    width: 190px;
+    padding-top: 0px;
+    margin-top: -10px;
+    }
+    body.main {
+    padding: 10px 20px 0px 20px;
+    background-color: ##c2dad0;
+    }
+    .navbar-default .navbar-nav>li>a {
+    color: white;
+    }
+    #navbar .navbar-nav>li.user .dropdown-menu {
+    left: -31px;
+    }
+    #content, #sidebar ul#dock li.launcher:hover:before, #sidebar ul#dock li.launcher.active:before{
+    background-color: #c2dad0;
+    }
+
+    .div-square {
+    padding: 5px;
+    border: 3px double #e1e1e1;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin: 5px;
+    min-height: 125px;
+    min-width: 125px;
+    padding-top: 15px;
+    }
+    .div-square i, .div-square h4{
+    display: block;
+    text-align: center;
+    color: #000000;
+    }
+    .div-square a{
+    text-decoration: none;
+    }
+    .ractangle-module{
+    display: inline;
+    text-align: center;
+    min-height: 175px;
+    }
+    .rmcontainer {
+    display: inline-block;
+    text-align: center;
+    }
+    h4{
+    font-size: 16px;
+    }
+
+    .div-square.block {
+    background: #84b7ae;
+    }
+    .div-square.block:hover {
+    border: 2px solid #84b7ae;
+    background: #ffffff;
+    cursor: pointer;
+    }
+
+    .div-square.block:hover i, .div-square.block:hover h4{
+    color: #84b7ae;
+    }

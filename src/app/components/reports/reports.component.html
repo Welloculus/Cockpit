@@ -1,18 +1,4 @@
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-                <span id="spa-title">Reports</span>
-                <small>Control panel</small>
-        </h1>
-
-
-                <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active" id="spa-title">Reports</li>
-                </ol>
-    </section>
-
+<div>
     <!-- Main content -->
     <section class="content">
             <div id="system-message-container">
@@ -24,10 +10,10 @@
                     <div class="col-xs-12 col-sm-12">
 
 <!-- start -->
-<div>
-     <div class="col-md-5 panel panel-default">
+<div class="row">
+     <!--<div class="col-md-5 panel panel-default">
           <div style="display: block">
-          <h3 class="tac">Heart Chart</h3>
+          <h3 class="tac">Heart Chart <br>({{start_date|date}} - {{end_date|date}})</h3>
             <canvas baseChart
                     [data]="pieChartData"
                     [labels]="pieChartLabels"
@@ -36,11 +22,36 @@
                     (chartHover)="chartHovered($event)"
                     (chartClick)="chartClicked($event)"></canvas>
           </div>
+     </div> -->
+     <div class="col-md-5 panel panel-default rdiv">
+       <div class="panelHeader">
+         <div class="panelHeader__title">
+              <h3 class="tac">{{title1}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+         </div>
+       </div>
+
+       <div class="panelBody embed-responsive embed-responsive-4by3" *ngIf="iframe1_url">
+          <iframe id="abc" [src]="iframe1_url" height="600" width="800"></iframe>
+       </div>
      </div>
-<div>
+
+     <div class="col-md-1"></div>
+     <div class="col-md-5 panel panel-default rdiv">
+       <div class="panelHeader">
+         <div class="panelHeader__title">
+           <h3 class="tac">{{title2}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+         </div>
+       </div>
+
+       <div class="panelBody embed-responsive embed-responsive-4by3">
+<iframe [src]="iframe2_url" height="600" width="800"></iframe>
+       </div>
+     </div>
+
+<!--<div>
      <div class="col-sm-offset-1 col-md-5 panel panel-default">
     <div style="display: block;">
-    <h3 class="tac">Blood Pressure Chart</h3>
+    <h3 class="tac">Blood Pressure Chart <br>({{start_date|date}} - {{end_date|date}})</h3>
     <canvas baseChart width="400" height="400"
                 [datasets]="lineChartData"
                 [labels]="lineChartLabels"
@@ -53,23 +64,98 @@
     </div>
   </div>
 </div>
+-->
 </div>
-<div>
-     <div class="col-md-6 panel panel-default">
-     <div style="display: block">
-          <h3 class="tac">Temperature Chart</h3>
-         <canvas baseChart
-                 [datasets]="barChartData"
-                 [labels]="barChartLabels"
-                 [options]="barChartOptions"
-                 [legend]="barChartLegend"
-                 [chartType]="barChartType"
-                 (chartHover)="chartHovered($event)"
-                 (chartClick)="chartClicked($event)"></canvas>
+<div class="row">
+     <div class="col-md-5 panel panel-default rdiv">
+            <div class="panelHeader">
+              <div class="panelHeader__title">
+                <h3 class="tac">{{title3}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+              </div>
+            </div>
+
+            <div class="panelBody embed-responsive embed-responsive-4by3">
+
+<iframe [src]="iframe3_url" height="600" width="800"></iframe>
+
+            </div>
+      </div>
+      <div class="col-md-1"></div>
+
+      <div class="col-md-5 panel panel-default rdiv">
+       <div class="panelHeader">
+         <div class="panelHeader__title">
+           <h3 class="tac">{{title4}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+         </div>
        </div>
- </div>
+
+       <div class="panelBody embed-responsive embed-responsive-4by3">
+<iframe [src]="iframe4_url" height="600" width="800"></iframe>
+       </div>
+     </div>
 
 </div>
+
+<div class="row">
+     <div class="col-md-5 panel panel-default rdiv">
+            <div class="panelHeader">
+              <div class="panelHeader__title">
+                <h3 class="tac">{{title5}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+              </div>
+            </div>
+
+            <div class="panelBody embed-responsive embed-responsive-4by3">
+
+<iframe [src]="iframe5_url" height="600" width="800"></iframe>
+
+            </div>
+      </div>
+      <div class="col-md-1"></div>
+
+      <div class="col-md-5 panel panel-default rdiv">
+       <div class="panelHeader">
+         <div class="panelHeader__title">
+           <h3 class="tac">{{title6}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+         </div>
+       </div>
+
+       <div class="panelBody embed-responsive embed-responsive-4by3">
+<iframe [src]="iframe6_url" height="600" width="800"></iframe>
+       </div>
+     </div>
+
+</div>
+
+<div class="row">
+     <div class="col-md-5 panel panel-default rdiv">
+            <div class="panelHeader">
+              <div class="panelHeader__title">
+                <h3 class="tac">{{title7}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+              </div>
+            </div>
+
+            <div class="panelBody embed-responsive embed-responsive-4by3">
+
+<iframe [src]="iframe7_url" height="600" width="800"></iframe>
+
+            </div>
+      </div>
+      <div class="col-md-1"></div>
+
+      <div class="col-md-5 panel panel-default rdiv">
+       <div class="panelHeader">
+         <div class="panelHeader__title">
+           <h3 class="tac">{{title8}} <br>({{start_date|date}} - {{end_date|date}})</h3>
+         </div>
+       </div>
+
+       <div class="panelBody embed-responsive embed-responsive-4by3">
+<iframe [src]="iframe8_url" height="600" width="800"></iframe>
+       </div>
+     </div>
+
+</div>
+
 <!-- end -->
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../../../app/config/global';
 
 @Component({
   selector: 'app-facilities',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacilitiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+     private globals: Globals
+  ) {
+       this.globals.title="Facilities";
+     }
+
 
   ngOnInit() {
   }

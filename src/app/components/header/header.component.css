@@ -1,3 +1,48 @@
 .logo-lg img {
     width: 179px;
 }
+
+#navbar .navbar-nav>li>.notification_dropdown {
+    margin-top: -5px;
+    width: 350px;
+    background: #f1f1f1;
+    position: absolute;
+    left: -185px;
+}
+.notification_dropdown{
+     padding-top: 0px;
+     padding-bottom: 0px;
+}
+.notification_dropdown li{
+     padding: 20px;
+     border-bottom: 1px solid #b9b9bb;
+     border-bottom-left-radius: 5px;
+     border-bottom-right-radius: 5px;
+}
+.notification_dropdown li:hover{
+     background: white;
+     cursor: pointer;
+}
+.notification_dropdown li:last-child{
+     border-bottom: none;
+}
+.notification_dropdown li a{
+     color: #0a0a0a
+}
+.notification_dropdown li span {
+     display: inline-block;
+     width: 30%;
+     font-weight: bold;
+}
+.notification_dropdown li span:first{
+     float: left;
+}
+.notification_dropdown li span:nth-child(2){
+     text-align: center;
+     width: 40%;
+}
+.notification_dropdown li span:last-child{
+     float: right;
+     width: 25%;
+     text-align: right;
+}

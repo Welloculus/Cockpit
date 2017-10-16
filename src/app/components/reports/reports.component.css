@@ -2,5 +2,45 @@
      padding: 0px;
      margin: 0px;
      text-align: center;
+     font-size: 18px;
+     padding-top: 5px;
+}
+iframe#bpc .filter-bar{
+     opacity: 0;
+}
+.filter-bar {
+    display: none!important;
+}
+.panel {
+    border-radius: 10px;
+}
+.rdiv{
+/*     min-height: 375px; */
+}
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 0.9em;
+    }
+}
 
+/* sm */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1em;
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 1.2em;
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.3em;
+    }
 }

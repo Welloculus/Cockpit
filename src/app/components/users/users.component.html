@@ -1,17 +1,4 @@
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-                <span id="spa-title">Users</span>
-                <small>Control panel</small>
-        </h1>
-
-
-                <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li class="active" id="spa-title">Users</li>
-                </ol>
-    </section>
+<div>
 
     <!-- Main content -->
     <section class="content">
@@ -53,10 +40,12 @@
                                                user.contact_numbers[0].primary.concat(((user.contact_numbers[0].secondary!="")?(", "+user.contact_numbers[0].secondary):""))
                                           }}</td>
                                           <td>{{
-                                               user.address[0].line1.concat(((user.address[0].line2!="")?(", "+user.address[0].line2):""))
+                                               ((user.address[0].line1!=undefined && user.address[0].line1!="")?(
+                                               user.address[0].line1.concat(((user.address[0].line2!=undefined && user.address[0].line2!="")?(", "+user.address[0].line2):""))
                                                .concat((user.address[0].city!=""?(", "+user.address[0].city):""))
                                                .concat((user.address[0].state!=""?(", "+user.address[0].state):""))
-                                               .concat((user.address[0].zip!=""?(", "+user.address[0].zip):""))
+                                               .concat(((user.address[0].zip!=undefined && user.address[0].zip!="")?(", "+user.address[0].zip):""))
+                                               ):"")
                                           }}</td>
                                           <td>{{user.email}}</td>
                                           <td>{{(user.gender=='M'?'Male':'Female')}}</td>

@@ -6,6 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { ChartsModule } from 'ng2-charts';
 
+import { APP_INITIALIZER } from '@angular/core';
+import { AppConfig } from './config/app.config';
+import { Globals } from './config/global';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -36,10 +39,10 @@ const appRoutes: Routes = [
 { path:'manage-alerts', component: ManageAlertsComponent, canActivate:[AuthGuard] },
 { path:'login', component: LoginComponent },
 { path:'', redirectTo: '/dashboard', pathMatch: 'full' },
-{ path:'', component: FooterComponent  },
 { path:'**', redirectTo: '/dashboard', pathMatch: 'full' }
 ]
 
+export function configLoad(config: AppConfig){ return () => config.load(); }
 
 @NgModule({
   declarations: [
@@ -66,7 +69,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     ChartsModule
   ],
-  providers: [AuthService,AuthGuard],
+  providers: [AppConfig,Globals,
+        { provide: APP_INITIALIZER, useFactory: configLoad, deps: [AppConfig], multi: true }, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

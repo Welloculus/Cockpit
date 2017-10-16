@@ -1,21 +1,20 @@
 <div class="wrapper">
 
-  <app-header *ngIf="authService.loggedIn()"></app-header>
+  <app-header></app-header>
 
-  <!-- Left side column. contains the logo and sidebar -->
-  <app-sidebar *ngIf="authService.loggedIn()"></app-sidebar>
+  <div id="wrapper" *ngIf="authService.loggedIn()">
+       <!-- Left side column. contains the logo and sidebar -->
+      <app-sidebar></app-sidebar>
 
-        <!-- Dashboard content -->
-     <div class="container-fluid row flashmsg" [class.aftrlgn]="authService.loggedIn()">
+      <!-- contains the main data -->
+     <div id="content">
           <flash-messages></flash-messages>
+          <router-outlet></router-outlet>
+          <app-footer></app-footer>
      </div>
-     <router-outlet></router-outlet>
-  <!-- /.content-wrapper -->
-  <app-footer *ngIf="authService.loggedIn()"></app-footer>
-
-  <!-- Control Sidebar -->
-  <app-right-sidebar></app-right-sidebar>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
+  </div>
+  <div id="wrapper" *ngIf="!authService.loggedIn()">
+       <app-login></app-login>
+       <app-footer></app-footer>
+  </div>
 </div>

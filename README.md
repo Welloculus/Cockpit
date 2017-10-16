@@ -1,30 +1,4 @@
-## Cockpit Url:
-Url: https://welloculus.github.io/Cockpit/public
-
-
-## Cockpit Login Credentials
-
-1. Provider Login:
-
-   username: provider
-
-   Password: pass@123
-
-
-2. Facilitator Login:
-
-   Username: facilitator
-
-   Password: pass@123
-
-
-3. Supplier Login:
-
-   Username: supplier
-
-   Password: pass@123
-
-## Cockpit
+# Cockpit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 

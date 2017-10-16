@@ -1,11 +1,7 @@
-<footer class="main-footer" *ngIf="authService.loggedIn()">
-  <strong>Copyright &copy; 2017 Welloculus. All Rights Reserved.
-Developed by <a href="http://www.transility.com">www.transility.com</a>.</strong> All rights
-  reserved.
+<footer class="main-footer navbar-default navbar-fixed-bottom" *ngIf="authService.loggedIn()">
+     <strong>&copy; 2017 Welloculus. Developed by <a href="http://www.transility.com" target="_blank">Transility</a>.</strong>
 </footer>
 
-<footer class="main-footer loginfooter" *ngIf="!authService.loggedIn()">
-  <strong>Copyright &copy; 2017 Welloculus. All Rights Reserved.
-Developed by <a href="http://www.transility.com">www.transility.com</a>.</strong> All rights
-  reserved.
+<footer class="main-footer navbar-default navbar-fixed-bottom loginfooter" *ngIf="!authService.loggedIn()">
+  <strong>&copy; 2017 Welloculus. Developed by <a href="http://www.transility.com" target="_blank">Transility</a>.</strong>
 </footer>

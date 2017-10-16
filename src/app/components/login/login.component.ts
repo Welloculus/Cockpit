@@ -20,6 +20,9 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+       if(localStorage.getItem('id_token')){
+          this.router.navigate(['/dashboard']);
+       }
   }
 
   onLoginSubmit(){

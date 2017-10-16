@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import { Globals } from '../../../app/config/global';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,8 +15,10 @@ export class SidebarComponent implements OnInit {
      constructor(
         private authService:AuthService,
        private router:Router,
-       private flashMessage: FlashMessagesService
-     ) { }
+       private flashMessage: FlashMessagesService,
+       private globals: Globals
+     ) {
+     }
 
      ngOnInit() {
           this.user = JSON.parse(localStorage.getItem('user'));

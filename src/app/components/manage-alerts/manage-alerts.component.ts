@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../../../app/config/global';
 
 @Component({
   selector: 'app-manage-alerts',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageAlertsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private globals: Globals) {
+     this.globals.title="Manage Alerts";
+  }
 
   ngOnInit() {
   }
