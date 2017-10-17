@@ -5,6 +5,7 @@
 }
 tbody > tr td:nth-of-type(even), tbody > tr th:nth-of-type(even) {
     float: none;
+    /* background: white;*/
 }
 thead>tr th:nth-of-type(even) {
     text-align: left;
@@ -18,7 +19,7 @@ thead>tr th:nth-of-type(even) {
      color: inherit;
 }
 .table-hover>tbody>tr:hover, .table>tbody>tr:hover, .table-hover>tbody>tr:hover, .table>tbody>tr:hover{
-     background: #f7f7f7; 
+     background: #f7f7f7;
      cursor: pointer;
 
 }
