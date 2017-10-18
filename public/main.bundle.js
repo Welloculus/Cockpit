@@ -63,7 +63,7 @@ var AuthService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Authorization', this.auth_token);
         headers.append('userId', this.userdata.id);
-        headers.append('Access-Control-Allow-Origin', 'http://' + this.host + ':' + this.port + '/*');
+        headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Credentials', 'true');
         return this.http.get('http://' + this.host + ':' + this.port + '/ApiGateway/' + this.userdata.user_type + '/devices/getDevices', { headers: headers })
             .map(function (res) { return res.json(); });
