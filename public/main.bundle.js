@@ -65,7 +65,7 @@ var AuthService = (function () {
         headers.append('userId', this.userdata.id);
         headers.append('Access-Control-Allow-Origin', '*');
         headers.append('Access-Control-Allow-Credentials', 'true');
-        return this.http.get('//' + this.host + ':' + this.port + '/ApiGateway/' + this.userdata.user_type + '/devices/getDevices', { headers: headers })
+        return this.http.get('http://' + this.host + ':' + this.port + '/ApiGateway/' + this.userdata.user_type + '/devices/getDevices', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getDeviceDetails = function (id) {
